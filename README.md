@@ -81,7 +81,7 @@ extension ExampleView {
 ### Property Ordering
 
 ```swift
-final class ExampleViewModel: ObservableObject {
+final class ExampleVM: ObservableObject {
 
     // 1. Injected Dependencies
     @Injected(\.exampleUseCase) private var exampleUseCase
@@ -121,7 +121,7 @@ final class ExampleViewModel: ObservableObject {
 
 ```swift
 // MARK: - GetSections
-extension ExampleViewModel {
+extension ExampleVM {
 
     func getSections() {
         ...
@@ -339,7 +339,7 @@ var serviceDetailsButtonLabel: some View {
 - Group **2 or more related use cases** into a container
 
 ```swift
-struct AddressUseCases {
+struct AddressUC {
     let fetchAddresses: FetchAddressesUseCase
     let deleteAddress: DeleteAddressUseCase
 }
